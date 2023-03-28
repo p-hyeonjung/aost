@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* initialize */
+html, body, div, header, nav, section, aside, article, footer, figure, figcaption, fieldset,
+legend, ul, ol, li, dl, dt, dd, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+fieldset {
+    border: none;
+}
+a:link {    /* 링크 걸린 상태 */
+    color: #4f4f4f;
+    text-decoration: none;
+}
+a:visited {     /* 한 번 방문한 상태 */
+    color: #8a8e91;
+    text-decoration: none;
+}
+body {
+    font-family: "Nanum";
+    color: #000;
+    background-color: #fff;
+    line-height: 1.2;
+}
+
+/* layout */
+#header_inner, #content, #footer_inner {
+    width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* header */
+#header_inner {
+    height: 140px;
+    position: relative;
+    background-color: #fff;
+    /* padding: 32px 0; */
+}
+.logo {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+.logo img {
+    width: 170px;
+}
+.topmenu {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.topmenu>li {
+    display: inline-block;
+    padding: 10px;
+}
+.topmenu>li>a:hover {
+    color: #91c2eb;
+    font-weight: bold;
+}
+.search_bar {
+    position: relative;
+    top: 45%;
+    left: 40%;
+    width: 250px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+.search_bar>i {
+    position: absolute;
+    right: 10px;
+}
+.search {
+    width: 100%;
+    height: 30px;
+    z-index: -1;
+    padding-left: 8px;
+}
+
+.mainMenu {
+    height: 50px;
+    border-top: 1px solid #91c2eb;
+    border-bottom: 1px solid #91c2eb;
+    text-align: center;
+}
+.mainMenu>li {
+    display: inline-block;
+    line-height: 50px;
+}
+/* .mainMenu>li:hover {
+    color: #91c2eb;
+} */
+.mainMenu>li>a {
+    font-size: 1.2em;
+    padding: 13px 60px;
+    color: #000;
+}
+.mainMenu>li>a:hover {
+    color: #5ca8e8;
+}
+
+/* footer */
+#footer {
+    background: #d4e5f3;
+    padding: 15px;
+    height: 130px;
+}
+#footer_inner {
+    position: relative;
+    
+}
+#footer_inner .info {
+    margin-bottom: 20px;
+}
+.info a {
+    color: #000;
+}
+#footer_inner ul {
+    overflow: hidden;
+}
+#footer_inner li {
+    float: left;
+    margin-right: 10px;
+    font-size: 0.8em;
+}
+#footer_inner>address {
+    font-style: normal;
+}
+#footer_inner>address>span {
+    display: block;
+    font-size: 0.9em;
+}
+#footer_inner p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+.cs_center {
+    width: 350px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.cs_center>h3 {
+    display: inline-block;
+}
