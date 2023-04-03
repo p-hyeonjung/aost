@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AOST : All Of Story Telling</title>
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/login_sign.css">
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/content.js"></script>
@@ -12,50 +13,50 @@
     <div class="sign">
         <div class="sign_logo">
             <a href="index.html">
-                <img src="images/logo3.png" alt="logo">
+                <img src="images/logo3.png" alt="logo" title="AOST">
             </a>
         </div>
         <div class="sign_info form">
-            <form action="/" class="sign_form">
+            <form action="#" name="sign_form" class="sign_form">
                 <input type="text" name="user_name" id="user_name" placeholder="이름" required>
                 <input type="text" name="id" id="id" placeholder="아이디" required>
                 <input type="password" name="pw" id="pw" placeholder="비밀번호" required>
                 <input type="password" name="pw_confirm" id="pw_confirm" placeholder="비밀번호 확인" required>
                 <input type="email" name="email" id="email" placeholder="이메일" required>
+                <div class="sign_TOS">
+                    <input type="checkbox" name="TOS_check_all" id="TOS_check_all">
+                    <label for="TOS_check_all">
+                        <span>전체 약관 동의</span>
+                    </label>
+                    <div class="TOS">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="TOS_check" id="TOS_check1" class="ck">
+                                <label for="TOS_check1">
+                                    <span>이용 약관 동의(필수)</span>
+                                </label>
+                                <a href="">약관 보기</a>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="TOS_check" id="TOS_check2" class="ck">
+                                <label for="TOS_check2">
+                                    <span>이벤트, 혜택 알림 수신 동의(선택)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="TOS_check" id="TOS_check3" class="ck">
+                                <label for="TOS_check3">
+                                    <span>개인 정보 수집 및 이용 동의(필수)</span>
+                                </label>
+                                <a href="">약관 보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn_area">
+                    <button type="submit" class="btn sign_btn">회원가입</button>
+                </div>
             </form>
-        </div>
-        <div class="sign_TOS">
-            <input type="checkbox" name="TOS_check_all" id="TOS_check_all">
-            <label for="TOS_check_all">
-                <span>전체 약관 동의</span>
-            </label>
-            <div class="TOS">
-                <ul>
-                    <li>
-                        <input type="checkbox" name="TOS_check" id="TOS_check1" class="ck">
-                        <label for="TOS_check1">
-                            <span>이용 약관 동의(필수)</span>
-                        </label>
-                        <a href="">약관 보기</a>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="TOS_check" id="TOS_check2" class="ck">
-                        <label for="TOS_check2">
-                            <span>이벤트, 혜택 알림 수신 동의(선택)</span>
-                        </label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="TOS_check" id="TOS_check3" class="ck">
-                        <label for="TOS_check3">
-                            <span>개인 정보 수집 및 이용 동의(필수)</span>
-                        </label>
-                        <a href="">약관 보기</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="btn_area">
-            <button type="submit" class="btn">회원가입</button>
         </div>
     </div>
 </body>

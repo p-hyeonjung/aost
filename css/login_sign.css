@@ -27,7 +27,7 @@ body {
     width: 300px;
     height: 150px;
     background-color: #91c2eb;
-    margin: 20px auto;
+    margin: 40px auto;
 }
 .form input {
     box-sizing: border-box;
@@ -43,13 +43,14 @@ body {
     margin-bottom: 15px;
 }
 .find_sign {
+    font-size: 0.9em;
     margin-bottom: 12px;
     overflow: hidden;
 }
-.find_sign span:first-child {
+.find_sign>div {
     float: left;
 }
-.find_sign span:last-child {
+.find_sign>span:last-child {
     float: right;
 }
 .login_sns {
@@ -137,5 +138,8 @@ form>input {
 }
 .sign_TOS li span {
     line-height: 25px;
+}
+.sign_btn {
+    margin: 12px 0;
 }
 /* ------------------------------------- sign ----------------------------------- */

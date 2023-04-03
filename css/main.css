@@ -64,10 +64,12 @@
 .l_btn {
     position: absolute;
     left: 0;
+    cursor: pointer;
 }
 .r_btn {
     position: absolute;
     right: 0;
+    cursor: pointer;
 }
 .event_left_right_button img {
     width: 90px;
@@ -80,8 +82,8 @@
     position: fixed;
     right: 15px;
     bottom: 15px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border: 1px solid #91c2eb;
     background-color: #fff;
     border-radius: 60px;
@@ -93,8 +95,8 @@
     margin-top: 6px;
 }
 .top-button img {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
 }
 /* ------------------------------------- index ----------------------------------- */
 /* contents */
@@ -169,7 +171,15 @@
     padding: 10px 0 0 50px;
 }
 .box li {
-    margin: 5px 0;
+    list-style: circle;
+    margin: 7px 0;
+}
+.box li:hover {
+    list-style: disc;
+    color: #5ca8e8;
+}
+.box li a:hover {
+    color: #5ca8e8;
 }
 /* contents */
 /* ------------------------------------- index ----------------------------------- */
@@ -185,6 +195,18 @@
 }
 #lt_info>span {
     display: inline-block;
+}
+.book_title {
+    font-weight: 800;
+}
+#lt_info>span::after {
+    content: " |";
+}
+.book_title::after {
+    font-weight: 400;
+}
+#lt_info>span:nth-child(4)::after {
+    content: "";
 }
 .lt_intro {
     margin: 10px 0;
@@ -373,7 +395,7 @@
 }
 .rank_title {
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 900;
     margin: 8px 0 3px;
 }
 .rank_writer {
@@ -515,6 +537,8 @@
     font-size: 0.9em;
 }
 .event-item-title>p {
+    font-size: 1.2em;
+    font-weight: 800;
     margin-bottom: 8px;
 }
 .event-item-image>img {

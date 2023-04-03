@@ -32,6 +32,13 @@ $(function () {
             moveSlider(index);
         }
     });
+
+    $('.event_canvas').hover(function () {
+        clearInterval(auto);
+    },function () {
+        autoSlider();
+    });
+
     function moveSlider(index) {
         $('.event_banner_panel').animate({
             left:-(index*720)
@@ -39,6 +46,7 @@ $(function () {
         $('.control_btn').removeClass('active');
         $('.control_btn').eq(index-1).addClass('active');
     }
+    
     function autoSlider() {
         auto=setInterval(function () {
             if(index<5 && sw_s==false) {
@@ -54,7 +62,8 @@ $(function () {
         },2500);
     }
     /* -------------------------- index event banner slide ------------------------- */
-    /* -------------------------- sign in all check -------------------------- */
+    /* ------------------------------------ sign in -------------------------------- */
+    // 체크박스
     let chk;
     // 체크박스 전체 선택/해제
     $('#TOS_check_all').click(function () {
@@ -73,7 +82,8 @@ $(function () {
             $('.ck').prop('checked',false); // 아래 약관 모두 체크 해제
         }
     }
-    /* -------------------------- sign in all check -------------------------- */
+    
+    /* ------------------------------------ sign in -------------------------------- */
     /* -------------------------- event_list ongoing/end -------------------------- */
     let now_date=new Date();
     for(let i=0; i<$('.event-date').length; i++) {
@@ -87,6 +97,12 @@ $(function () {
         if(now_date.getTime() > e_date.getTime()) {     // 현재 날짜가 이벤트 마감 날짜보다 지났을 경우
             // '진행중'을 '마감'으로 바꾸고 css변경
             $('.event-date').eq(i).parent().parent().find('.event-status').addClass('event_end').html('마감');
+            $('.event-date').eq(i).prev().css({
+                fontWeight:300,
+                color:'#8a8e91'
+            });
+        } else {
+            $('.event-date').eq(i).prev().css('font-weight','800');
         }
     }
     /* -------------------------- event_list ongoing/end -------------------------- */
